@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="circle-timer">
+  <svg width="50" height="50">
+    <circle cx="25" cy="25" r="20" stroke="#1e293b" stroke-width="4" fill="none"/>
+    <circle id="progressCircle" cx="25" cy="25" r="20"
+      stroke="#38bdf8" stroke-width="4" fill="none"
+      stroke-dasharray="125.6"
+      stroke-dashoffset="0"
+      transform="rotate(-90 25 25)"/>
+  </svg>
+</div>
+
+<div id="setup">
+  <h3>Select Quiz Time (minutes)</h3>
+  <input type="number" id="timeInput" value="1" min="1">
+  <button onclick="startQuiz()">Start Quiz</button>
+
+</div>
+
+
+<div class="container">
+
+  <h1>Quiz App</h1>
+
+  <div id="quizBox">
+    <div class="top-bar">
+  <span id="questionNumber"></span>
+  <span id="timer">10</span>
+</div>
+
+<div class="progress-container">
+  <div id="progressBar"></div>
+</div>
+
+    <h2 id="question"></h2>
+
+    <div id="answers"></div>
+  </div>
+
+  <!-- NAV BUTTONS -->
+  <div class="nav-buttons">
+    <button id="prevBtn">Previous</button>
+    <button id="nextBtn">Next</button>
+  </div>
+
+  <!-- RESULT -->
+  <div id="result" class="hide">
+    <h2 id="scoreText"></h2>
+    <button onclick="reviewAnswers()">Review Answers</button>
+<p id="timeSpent"></p>
+<p id="submissionTime"></p> 
+ </div>
+
+</div>
+
+<div class="datetime">
+  <p id="date"></p>
+  <p id="clock"></p>
+</div>
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
